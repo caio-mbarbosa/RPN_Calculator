@@ -2,8 +2,11 @@ class RPNCalculator:
     def __init__(self):
         self.stack = []
     
-    def calculate(self, expression):
-        tokens = expression.split()
+    def calculate(self, filename):
+        with open(filename, "r") as f:
+            content = f.read()
+        
+        tokens = content.split()
         
         for token in tokens:
             if token.isnumeric():
@@ -33,5 +36,5 @@ class RPNCalculator:
             raise ValueError("Invalid expression")
 
 calculator = RPNCalculator()
-result = calculator.calculate("10 10 +")
+result = calculator.calculate(r'C:\Users\caio_\Downloads\Calc1.stk')
 print(result) 
