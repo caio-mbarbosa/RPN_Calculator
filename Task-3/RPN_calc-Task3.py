@@ -43,5 +43,6 @@ class RPNCalculator:
         return result
 
 calculator = RPNCalculator()
+#Aqui você coloca o diretório em que está o arquivo para ler
 result = calculator.calculate(r'C:\Users\caio_\Downloads\Calc1.stk')
 print(result) 
